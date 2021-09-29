@@ -7,9 +7,10 @@ public class Movimiento : MonoBehaviour
 
     bool vivo = true;
     bool invencible = false;
-    float speed = 10f;
-   
-    
+    float speedH = 10f;
+    float speedV = 10f;
+
+
 
 
     // Start is called before the first frame update
@@ -21,11 +22,11 @@ public class Movimiento : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float DesplY = Input.GetAxis("Vertival") * speed;
-        transform.Translate(Vector).up * DesplY * Time.deltaTime;
+        float DesplY = Input.GetAxis("Vertival") * speedH;
+        transform.Translate(Vector3.up * DesplY * Time.deltaTime);
 
-        float DesplX = Input.GetAxis("Horizontal") * speed;
-        transform.Translate(Vector).up * DesplY * Time.deltaTime;
+        float DesplX = Input.GetAxis("Horizontal") * speedV;
+        transform.Translate(Vector3.down * DesplX * Time.deltaTime);
 
 
     }
