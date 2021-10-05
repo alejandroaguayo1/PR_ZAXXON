@@ -14,6 +14,9 @@ public class Movimiento : MonoBehaviour
     float limeteU = 10f;
     float limeteS = 1f;
 
+    bool inLimitH = true;
+    bool inLimitV = true;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -28,31 +31,29 @@ public class Movimiento : MonoBehaviour
         float posX = transform.position.x;
         float posY = transform.position.y;
         float rot = Input.GetAxis("Horizontal-J2");
-        if (posX > limeteR && desplH > 0)
+        if (posX > limeteR && desplH > 0 || posX < limeteL && desplH < 0)
         {
-            despspeed = 0f;
+            inLimitH = false;
 
         }
+
         else
         {
-            despspeed = 10f;
+            inLimitH = true;
         }
-        float DesplH = Input.GetAxis("Vertival") * speedH;
-        transform.Translate(Vector3.up * DesplH * Time.deltaTime);
 
-        float DesplV = Input.GetAxis("Horizontal") * speedV;
-        transform.Translate(Vector3.right * DesplV * Time.deltaTime);
-
-        if (posX > limeteL && desplV > 0)
+        if (inLimitH)
         {
-            despspeed = 0f;
-
+            transform.Translate(Vector3.right * Time.deltaTime * desplH * despspeed, Space.World);
         }
-        else
+
+
+        if (inLimitV)
         {
-            despspeed = 10f;
+            transform.Translate(Vector3.up * Time.deltaTime * desplV * despspeed, Space.World);
         }
 
+       
         
 
     }
