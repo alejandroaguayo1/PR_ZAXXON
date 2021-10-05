@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Movimiento : MonoBehaviour
+public class MovimientoPrueba : MonoBehaviour
 {
     float despspeed = 10f;
     float limeteR = -10f;
@@ -18,7 +18,7 @@ public class Movimiento : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        despspeed = 10f;                                                                                                                       
+        
     }
 
     // Update is called once per frame
@@ -29,6 +29,7 @@ public class Movimiento : MonoBehaviour
         float posX = transform.position.x;
         float posY = transform.position.y;
         float rot = Input.GetAxis("Horizontal-J2");
+
         if (Input.GetKey(KeyCode.UpArrow))
         {
             this.transform.Translate(Vector3.forward * Time.deltaTime);
@@ -48,7 +49,6 @@ public class Movimiento : MonoBehaviour
         {
             this.transform.Rotate(Vector3.up, 10);
         }
-
         if (posX > limeteR && desplH > 0 || posX < limeteL && desplH < 0)
         {
             inLimitH = false;
@@ -80,7 +80,5 @@ public class Movimiento : MonoBehaviour
         {
             transform.Translate(Vector3.right * Time.deltaTime * desplH * despspeed, Space.World);
         }
-        
-
     }
 }
