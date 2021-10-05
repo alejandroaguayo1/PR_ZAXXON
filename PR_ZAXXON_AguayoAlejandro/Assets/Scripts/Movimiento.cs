@@ -28,7 +28,7 @@ public class Movimiento : MonoBehaviour
         float posX = transform.position.x;
         float posY = transform.position.y;
         float rot = Input.GetAxis("Horizontal-J2");
-        if (posX > 10 && desplH > 0)
+        if (posX > limeteR && desplH > 0)
         {
             despspeed = 0f;
 
@@ -42,10 +42,18 @@ public class Movimiento : MonoBehaviour
 
         float DesplV = Input.GetAxis("Horizontal") * speedV;
         transform.Translate(Vector3.right * DesplV * Time.deltaTime);
+
+        if (posX > limeteL && desplV > 0)
+        {
+            despspeed = 0f;
+
+        }
+        else
+        {
+            despspeed = 10f;
+        }
+
         
-
-
-      
 
     }
 }
