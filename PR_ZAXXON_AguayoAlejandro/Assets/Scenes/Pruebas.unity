@@ -604,7 +604,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d86337c80b7e9594bb62252d11026502, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerPosition: {fileID: 0}
+  playerPosition: {fileID: 692790394}
   smoothVelocity: 0.3
   camaraVelocity: {x: 0, y: 0, z: 0}
 --- !u!1001 &3760129630155184893

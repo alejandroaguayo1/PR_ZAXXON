@@ -18,7 +18,7 @@ public class Movimiento : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        despspeed = 10f;                                                                                                                       
+        despspeed = 10f;
     }
 
     // Update is called once per frame
@@ -28,27 +28,27 @@ public class Movimiento : MonoBehaviour
         float desplV = Input.GetAxis("Vertical");
         float posX = transform.position.x;
         float posY = transform.position.y;
-        float rot = Input.GetAxis("Horizontal-J2");
+
+
         if (Input.GetKey(KeyCode.UpArrow))
         {
-            this.transform.Translate(Vector3.forward * Time.deltaTime);
+            this.transform.Translate(Vector3.up * Time.deltaTime * despspeed);
         }
 
         if (Input.GetKey(KeyCode.DownArrow))
         {
-            this.transform.Translate(Vector3.back * Time.deltaTime);
+            this.transform.Translate(Vector3.down * Time.deltaTime * despspeed);
         }
 
         if (Input.GetKey(KeyCode.LeftArrow))
         {
-            this.transform.Rotate(Vector3.up, -10);
+            this.transform.Translate(Vector3.left * Time.deltaTime * despspeed);
         }
 
         if (Input.GetKey(KeyCode.RightArrow))
         {
-            this.transform.Rotate(Vector3.up, 10);
+            this.transform.Translate(Vector3.right * Time.deltaTime * despspeed);
         }
-
         if (posX > limeteR && desplH > 0 || posX < limeteL && desplH < 0)
         {
             inLimitH = false;
@@ -65,6 +65,11 @@ public class Movimiento : MonoBehaviour
             transform.Translate(Vector3.down * Time.deltaTime * desplV * despspeed, Space.World);
         }
 
+        if (posY > limeteR && desplV > 0 || posY < limeteL && desplV < 0)
+        {
+            inLimitH = false;
+
+        }
 
         if (inLimitV)
         {
@@ -80,7 +85,5 @@ public class Movimiento : MonoBehaviour
         {
             transform.Translate(Vector3.right * Time.deltaTime * desplH * despspeed, Space.World);
         }
-        
-
     }
 }
