@@ -9,15 +9,15 @@ public class Movimiento : MonoBehaviour
     float speedH = 10f;
     float speedV = 10f;
     float despspeed = 10f;
-    float limeteR = 10;
-    float limeteL = 10;
-    float limeteU = 10;
-    float limeteD = 10;
+    float limeteR = -10f;
+    float limeteL = 10f;
+    float limeteU = 10f;
+    float limeteS = 1f;
 
     // Start is called before the first frame update
     void Start()
     {
-                                                                                                                               
+        despspeed = 10f;                                                                                                                       
     }
 
     // Update is called once per frame
@@ -26,8 +26,9 @@ public class Movimiento : MonoBehaviour
         float desplH = Input.GetAxis("Horizontal");
         float desplV = Input.GetAxis("Vertical");
         float posX = transform.position.x;
-        float posY = transform.position.y; 
-        if(posX > 10 && despspeed > 0)
+        float posY = transform.position.y;
+        float rot = Input.GetAxis("Horizontal-J2");
+        if (posX > 10 && desplH > 0)
         {
             despspeed = 0f;
 
@@ -41,6 +42,9 @@ public class Movimiento : MonoBehaviour
 
         float DesplV = Input.GetAxis("Horizontal") * speedV;
         transform.Translate(Vector3.right * DesplV * Time.deltaTime);
+        
+
+
       
 
     }
