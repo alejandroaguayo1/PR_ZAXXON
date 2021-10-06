@@ -21,11 +21,11 @@ public class Velocimetro : MonoBehaviour
         {
             transform.Translate(Vector3.forward * Time.deltaTime * speed);
         }
-        if(tiempotranscurrido >= 60)
+        if(tiempotranscurrido >= 10)
         {
             moving = false;
             float posZ = transform.position.z / 10;
-            print("te mueves a una velocidad de" + posZ + "km/min");
+            print("te mueves a una velocidad de" + posZ);
         }   
         //print(Time.time);
 
