@@ -5,11 +5,11 @@ using UnityEngine;
 public class MovimientoPrueba : MonoBehaviour
 {
     float despspeed = 10f;
-    float limeteR = -10f;
-    float limeteL = 10f;
-    float limeteU = 10f;
-    float limeteS = 1f;
 
+    float limeteR = 10f;
+    float limeteL = -10f;
+    float limeteU = 10f;
+    float limeteS = 0f;
     bool inLimitH = true;
     bool inLimitV = true;
     bool inLimitR = true;
@@ -28,7 +28,7 @@ public class MovimientoPrueba : MonoBehaviour
         float desplV = Input.GetAxis("Vertical");
         float posX = transform.position.x;
         float posY = transform.position.y;
-        
+       
 
         if (Input.GetKey(KeyCode.UpArrow))
         {
@@ -49,7 +49,10 @@ public class MovimientoPrueba : MonoBehaviour
         {
             this.transform.Translate(Vector3.right * Time.deltaTime * despspeed);
         }
-        if (posX > limeteR && desplH > 0 || posX < limeteL && desplH < 0)
+
+
+        //restricciones
+        if (posY > limeteU && desplH > 0 || posY < limeteS && desplH < 0)
         {
             inLimitH = false;
 
@@ -62,23 +65,24 @@ public class MovimientoPrueba : MonoBehaviour
 
         if (inLimitH)
         {
-            transform.Translate(Vector3.down * Time.deltaTime * desplV * despspeed, Space.World);
+            this.transform.Translate(Vector3.down * Time.deltaTime * desplV * despspeed, Space.World);
         }
 
 
         if (inLimitV)
         {
-            transform.Translate(Vector3.up * Time.deltaTime * desplV * despspeed, Space.World);
+            this.transform.Translate(Vector3.up * Time.deltaTime * desplV * despspeed, Space.World);
         }
+        if (posX > limeteR && desplH > 0 || posX < limeteL && desplH < 0)
 
         if (inLimitL)
         {
-            transform.Translate(Vector3.left * Time.deltaTime * desplH * despspeed, Space.World);
+            this.transform.Translate(Vector3.left * Time.deltaTime * desplH * despspeed, Space.World);
         }
 
         if (inLimitR)
         {
-            transform.Translate(Vector3.right * Time.deltaTime * desplH * despspeed, Space.World);
+            this.transform.Translate(Vector3.right * Time.deltaTime * desplH * despspeed, Space.World);
         }
     }
 }
