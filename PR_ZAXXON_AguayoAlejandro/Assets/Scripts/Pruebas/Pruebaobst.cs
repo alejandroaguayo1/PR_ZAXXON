@@ -6,7 +6,7 @@ public class Pruebaobst : MonoBehaviour
 {
 
     [SerializeField] GameObject Initgame;
-
+    
 
     // Start is called before the first frame update
     void Start()
