@@ -4,85 +4,73 @@ using UnityEngine;
 
 public class MovimientoPrueba : MonoBehaviour
 {
-    float despspeed = 10f;
+    [SerializeField] float desplSpeed;
 
-    float limeteR = 10f;
-    float limeteL = -10f;
-    float limeteU = 10f;
-    float limeteS = 0f;
+    float limiteR = 10;
+    float limiteL = -10;
+    float limiteU = 10;
+    float limiteS = 1;
+
     bool inLimitH = true;
     bool inLimitV = true;
-    bool inLimitR = true;
-    bool inLimitL = true;
+
+
 
     // Start is called before the first frame update
     void Start()
     {
-        despspeed = 10f;
+        transform.position = new Vector3(0f, 2.3f, 0f);
+        desplSpeed = 10f;
     }
 
     // Update is called once per frame
     void Update()
     {
+        MoverNave();
+
+
+
+        
+
+    }
+
+    void MoverNave()
+    {
         float desplH = Input.GetAxis("Horizontal");
         float desplV = Input.GetAxis("Vertical");
+
+
         float posX = transform.position.x;
         float posY = transform.position.y;
-       
 
-        if (Input.GetKey(KeyCode.UpArrow))
-        {
-            this.transform.Translate(Vector3.up * Time.deltaTime * despspeed);
-        }
-
-        if (Input.GetKey(KeyCode.DownArrow))
-        {
-            this.transform.Translate(Vector3.down * Time.deltaTime * despspeed);
-        }
-
-        if (Input.GetKey(KeyCode.LeftArrow))
-        {
-            this.transform.Translate(Vector3.left * Time.deltaTime * despspeed);
-        }
-
-        if (Input.GetKey(KeyCode.RightArrow))
-        {
-            this.transform.Translate(Vector3.right * Time.deltaTime * despspeed);
-        }
-
-
-        //restricciones
-        if (posY > limeteU && desplH > 0 || posY < limeteS && desplH < 0)
+        if (posX > limiteR && desplH > 0 || posX < limiteL && desplH < 0)
         {
             inLimitH = false;
-
         }
-
         else
         {
             inLimitH = true;
         }
 
+        if (posY > limiteU && desplV > 0 || posY < limiteS && desplV < 0)
+        {
+            inLimitV = false;
+        }
+        else
+        {
+            inLimitV = true;
+        }
+
         if (inLimitH)
         {
-            this.transform.Translate(Vector3.down * Time.deltaTime * desplV * despspeed, Space.World);
+            transform.Translate(Vector3.right * Time.deltaTime * desplH * desplSpeed, Space.World);
         }
 
 
         if (inLimitV)
         {
-            this.transform.Translate(Vector3.up * Time.deltaTime * desplV * despspeed, Space.World);
-        }
-        if (posX > limeteR && desplH > 0 || posX < limeteL && desplH < 0)
-
-        if (inLimitL)
-        {
-            this.transform.Translate(Vector3.left * Time.deltaTime * desplH * despspeed, Space.World);
+            transform.Translate(Vector3.up * Time.deltaTime * desplV * desplSpeed, Space.World);
         }
 
-        if (inLimitR)
-        {
-            this.transform.Translate(Vector3.right * Time.deltaTime * desplH * despspeed, Space.World);
-        }
     }
 }
