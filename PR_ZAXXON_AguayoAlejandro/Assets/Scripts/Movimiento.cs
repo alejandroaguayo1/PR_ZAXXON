@@ -35,7 +35,7 @@ public class Movimiento : MonoBehaviour
 
 
 
-        f
+        
 
     }
 
