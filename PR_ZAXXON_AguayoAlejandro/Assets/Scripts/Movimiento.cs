@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class Movimiento : MonoBehaviour
 {
+    InitGame initGame;
     
+
     [SerializeField] float desplSpeed;
 
     
@@ -17,15 +19,16 @@ public class Movimiento : MonoBehaviour
     bool inLimitH = true;
     bool inLimitV = true;
 
-
+    
 
     // Start is called before the first frame update
     void Start()
     {
+        initGame = GameObject.Find("InitGame").GetComponent<InitGame>();
         transform.position = new Vector3(0f, 2.3f, 0f);
         
-        desplSpeed = 10f;
-        // pillar la velocidad del initgame (falta completar) InitGameScript = GameObject.Find
+        desplSpeed = initGame.spaceshipSpeed;
+        // pillar la velocidad del initgame (falta completar) InitGame = GameObject.Find
     }
 
     // Update is called once per frame

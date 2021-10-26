@@ -5,6 +5,7 @@ using UnityEngine;
 public class InitGame : MonoBehaviour
 {
     public float spaceshipSpeed = 0f;
+    float n = 0f;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,8 +17,9 @@ public class InitGame : MonoBehaviour
     void Update()
     {
         
-       
-            
+        spaceshipSpeed = 10f + n + 1;
+
+
 
     }
 }
