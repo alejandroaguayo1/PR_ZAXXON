@@ -17,7 +17,7 @@ public class InitGame : MonoBehaviour
     void Update()
     {
         
-        spaceshipSpeed = 10f + n + 1;
+        spaceshipSpeed = 10f + n++ * Time.deltaTime;
 
 
 

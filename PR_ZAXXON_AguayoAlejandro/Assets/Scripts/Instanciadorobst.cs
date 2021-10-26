@@ -35,7 +35,8 @@ public class Instanciadorobst : MonoBehaviour
     {
         intervalo = distanciaentreobtaculos / initGame.spaceshipSpeed;
         
-        for (int n = 0; ; n++) { 
+        for (int n = 0; ; n++) 
+        { 
             float aleatorioX = Random.Range(-9, 10);
             float aleatorioY = Random.Range(0, 5);
             Vector3 newPos = new Vector3(aleatorioX, aleatorioY, transform.position.z);

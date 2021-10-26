@@ -28,21 +28,14 @@ public class Movimiento : MonoBehaviour
         transform.position = new Vector3(0f, 2.3f, 0f);
         
         desplSpeed = initGame.spaceshipSpeed;
-        // pillar la velocidad del initgame (falta completar) InitGame = GameObject.Find
     }
 
     // Update is called once per frame
     void Update()
     {
-        
         MoverNave();
         float rot = Input.GetAxis("Horizontal-J2");
         transform.Rotate(Vector3.back * Time.deltaTime * rot * 100f);
-
-
-
-
-
     }
 
     void MoverNave()
