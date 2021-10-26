@@ -25,6 +25,7 @@ public class Movimiento : MonoBehaviour
         transform.position = new Vector3(0f, 2.3f, 0f);
         
         desplSpeed = 10f;
+        // pillar la velocidad del initgame (falta completar) InitGameScript = GameObject.Find
     }
 
     // Update is called once per frame
@@ -32,10 +33,12 @@ public class Movimiento : MonoBehaviour
     {
         
         MoverNave();
+        float rot = Input.GetAxis("Horizontal-J2");
+        transform.Rotate(Vector3.back * Time.deltaTime * rot * 100f);
 
 
 
-        
+
 
     }
 
@@ -81,4 +84,13 @@ public class Movimiento : MonoBehaviour
         }
 
     }
+    /*private void OnTriggerEnter(Collider other)    destruir nave
+    {
+        if(other.gameObject.layer ==//numero capa de obstaculos)
+            
+        {
+            iniGameScript.spaceshiSpeed= 0f;
+            Destroy(other.gameObject);
+
+        }*/
 }
