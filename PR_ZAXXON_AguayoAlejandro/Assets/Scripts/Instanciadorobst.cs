@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Pruebaobst : MonoBehaviour
+public class Instanciadorobst : MonoBehaviour
 {
 
     [SerializeField] GameObject prefab;
@@ -15,7 +15,7 @@ public class Pruebaobst : MonoBehaviour
     {
         initGameScript = GameObject.Find("InitGame").GetComponent<InitGameScript>();
         intervalo = 0.4f;
-        distanciaentreobtaculos = 70f;
+        distanciaentreobtaculos = 60f;
         StartCoroutine("Obstaculo");
 
     }
