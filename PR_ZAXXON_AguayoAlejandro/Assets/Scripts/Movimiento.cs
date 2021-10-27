@@ -9,7 +9,7 @@ public class Movimiento : MonoBehaviour
     
 
     [SerializeField] float desplSpeed;
-
+    [SerializeField] GameObject navePrefab;
     
     float limiteR = 10;
     float limiteL = -10;
@@ -90,4 +90,16 @@ public class Movimiento : MonoBehaviour
             Destroy(other.gameObject);
 
         }*/
+    private void OnTriggerEnter(Collider other)
+    {
+        print("boom");
+        if (other.gameObject.layer == 6)
+        {
+
+            //initGameScript.SendMessage("Morir");
+            navePrefab.SetActive(false);
+            //Destroy(gameObject);
+
+        }
+    }
 }
