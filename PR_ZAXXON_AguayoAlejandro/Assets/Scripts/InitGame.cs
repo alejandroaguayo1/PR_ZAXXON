@@ -53,6 +53,7 @@ public class InitGame : MonoBehaviour
     public void Morir()
     {
         print("Me he muerto");
+        alive = false;
         spaceshipSpeed = 0f;
         Instanciadorobst instanciadorobst = GameObject.Find("Instanciadorobst").GetComponent<Instanciadorobst>();
         instanciadorobst.SendMessage("Parar");
