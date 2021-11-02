@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Escenajuego.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 1
+    path: Assets/Scenes/GameOver.unity
+    guid: ef806a3016dc17b46bb7ba231ca7023b
+  - enabled: 1
     path: Assets/Scenes/High Scores.unity
     guid: b59ad05b994035b429baaa95a2a4ce39
   m_configObjects: {}

@@ -50,13 +50,20 @@ public class InitGame : MonoBehaviour
 
     }
     // void Morir mirar GitHub
+
+    public void Pararobst()
+    {
+        StopCoroutine("Obstaculo");
+
+    }
     public void Morir()
     {
         print("Me he muerto");
         alive = false;
         spaceshipSpeed = 0f;
         Instanciadorobst instanciadorobst = GameObject.Find("Instanciadorobst").GetComponent<Instanciadorobst>();
-        instanciadorobst.SendMessage("Parar");
+        instanciadorobst.SendMessage("Pararobst");
+        SceneManager.LoadScene(2);
     }
 
 

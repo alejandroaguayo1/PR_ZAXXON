@@ -68,4 +68,9 @@ public class Instanciadorobst : MonoBehaviour
 
 
     }
+    public void Pararobst() 
+    {
+        StopCoroutine("Obstaculo");
+    
+    }
 }
