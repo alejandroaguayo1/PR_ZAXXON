@@ -90,15 +90,17 @@ public class Movimiento : MonoBehaviour
             Destroy(other.gameObject);
 
         }*/
+    
+    
     private void OnTriggerEnter(Collider other)
     {
         print("boom");
         if (other.gameObject.layer == 6)
         {
-
-            //initGameScript.SendMessage("Morir");
-            navePrefab.SetActive(false);
-            //Destroy(gameObject);
+            
+            initGame.SendMessage("Morir");
+            //navePrefab.SetActive(false);
+            Destroy(gameObject);
 
         }
     }

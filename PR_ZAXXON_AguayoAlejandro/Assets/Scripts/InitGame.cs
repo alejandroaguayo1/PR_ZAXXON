@@ -43,9 +43,9 @@ public class InitGame : MonoBehaviour
         //posible turbo spaceshipSpeed = 10f + n++ * Time.deltaTime; 
 
         float tiempo = Time.time; //-tiempopasado (posibilidades)
-        print(Mathf.Round(tiempo));
+        //print(Mathf.Round(tiempo));
         score = Mathf.Round(tiempo) * spaceshipSpeed;
-        print(Mathf.Round(score));
+        //print(Mathf.Round(score));
         scoreText.text = (Mathf.Round(score)) + "mts";
 
     }
