@@ -17,6 +17,7 @@ public class InitGame : MonoBehaviour
 
     //UI
     [SerializeField] Text scoreText;
+    [SerializeField] Text speedText;
     // Start is called before the first frame update
     void Start()
     {
@@ -47,7 +48,8 @@ public class InitGame : MonoBehaviour
         score = Mathf.Round(tiempo) * spaceshipSpeed;
         //print(Mathf.Round(score));
         scoreText.text = (Mathf.Round(score)) + "mts";
-
+        float speedMetric = (spaceshipSpeed * 3600) / 1000;
+        speedText.text = (Mathf.Round(speedMetric)) + "km/h";
     }
     // void Morir mirar GitHub
 
@@ -61,9 +63,9 @@ public class InitGame : MonoBehaviour
         print("Me he muerto");
         alive = false;
         spaceshipSpeed = 0f;
-        Instanciadorobst instanciadorobst = GameObject.Find("Instanciadorobst").GetComponent<Instanciadorobst>();
+        Instanciadorobst instanciadorobst = GameObject.Find("Instanciador").GetComponent<Instanciadorobst>();
         instanciadorobst.SendMessage("Pararobst");
-        SceneManager.LoadScene(2);
+        //SceneManager.LoadScene(2);
     }
 
 
