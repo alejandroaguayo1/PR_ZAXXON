@@ -95,13 +95,20 @@ public class Movimiento : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         print("boom");
-        if (other.gameObject.layer == 6)
+        if (initGame.invencible == false)
+                if (other.gameObject.layer == 6)
         {
             
             initGame.SendMessage("Morir");
             //navePrefab.SetActive(false);
-            Destroy(gameObject);
+            //Destroy(gameObject);
 
         }
+        /*
+        if(initGame.invencible == true)
+        {
+            initGame.alive = true;
+        }
+        */
     }
 }
