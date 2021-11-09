@@ -49,7 +49,7 @@ public class Energie : MonoBehaviour
         if (initGame.invencible == true)
         {
             initGame.alive = true;
-
+            
         }
     }
 }
