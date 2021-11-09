@@ -39,4 +39,9 @@ public class Configscript : MonoBehaviour
         SceneManager.LoadScene(0);
 
     }
+    public void EscenaVolverJuego()
+    {
+        SceneManager.LoadScene(1);
+
+    }
 }

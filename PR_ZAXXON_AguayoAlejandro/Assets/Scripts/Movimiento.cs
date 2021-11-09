@@ -90,15 +90,7 @@ public class Movimiento : MonoBehaviour
         }
 
     }
-    /*private void OnTriggerEnter(Collider other)    destruir nave
-    {
-        if(other.gameObject.layer ==//numero capa de obstaculos)
-            
-        {
-            iniGameScript.spaceshiSpeed= 0f;
-            Destroy(other.gameObject);
-
-        }*/
+    
     
     
     private void OnTriggerEnter(Collider other)
@@ -110,8 +102,7 @@ public class Movimiento : MonoBehaviour
             
             initGame.SendMessage("Morir");
             //navePrefab.SetActive(false);
-            //Destroy(gameObject);
-
+            
         }
         /*
         if(initGame.invencible == true)

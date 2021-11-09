@@ -10,7 +10,7 @@ public class InitGame : MonoBehaviour
     // saber en qué escena estoy int y = SceneManager.GetActiveScene()BuildIndex; 
 
    
-    static float score;
+    float score;
     [SerializeField] float maxSpeed;
     public bool  alive;
     public bool invencible;
@@ -28,7 +28,7 @@ public class InitGame : MonoBehaviour
         //score = 0; //distancia recorrida = velocidad * tiempo (con el time)
         maxSpeed = 70;
         alive = true;
-        //float tiempopasado = Time.time;
+        
         scoreText.text = (Mathf.Round(score)) + "mts";
 
     }
@@ -45,7 +45,7 @@ public class InitGame : MonoBehaviour
 
         //posible turbo spaceshipSpeed = 10f + n++ * Time.deltaTime; 
 
-        float tiempo = Time.time; //-tiempopasado (posibilidades)
+        float tiempo = Time.timeSinceLevelLoad;
         score = Mathf.Round(tiempo) * spaceshipSpeed;
         scoreText.text = (Mathf.Round(score)) + "mts";
         float speedMetric = (spaceshipSpeed * 3600) / 1000;
@@ -78,6 +78,7 @@ public class InitGame : MonoBehaviour
     {
 
     }
+
 
 
 }
