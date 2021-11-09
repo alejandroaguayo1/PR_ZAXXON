@@ -10,7 +10,7 @@ public class InitGame : MonoBehaviour
     // saber en qué escena estoy int y = SceneManager.GetActiveScene()BuildIndex; 
 
    
-    float score;
+    public float score;
     [SerializeField] float maxSpeed;
     public bool  alive;
     public bool invencible;
