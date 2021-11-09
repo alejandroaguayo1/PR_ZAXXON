@@ -6,5 +6,6 @@ public class GameManager : MonoBehaviour
 {
     public static float volumeMusic = 5f;
     public static int highscore = 0;
-
+    public static float dificultad = 2f;
+    public static float música = 1f;
 }

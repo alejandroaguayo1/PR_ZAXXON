@@ -10,7 +10,7 @@ public class Movimiento : MonoBehaviour
 
     [SerializeField] float desplSpeed;
     [SerializeField] GameObject navePrefab;
-    [SerializeField] Transform cannon;
+    //[SerializeField] Transform cannon;
     
     float limiteR = 10;
     float limiteL = -10;
@@ -38,15 +38,15 @@ public class Movimiento : MonoBehaviour
         MoverNave();
         float rot = Input.GetAxis("Horizontal-J2");
         transform.Rotate(Vector3.back * Time.deltaTime * rot * 100f);
-        if (Input.GetButtonDown("Fire1"))
+        /*if (Input.GetButtonDown("Fire1"))
         {
             Disparar();
-        }
+        }*/
     }
-    void Disparar()
+    /*void Disparar()
     {
-        //Instantiate(bola, cannon);
-    }
+        Instantiate(bola, cannon);
+    }*/
 
     void MoverNave()
     {

@@ -5,23 +5,28 @@ using UnityEngine.SceneManagement;
 
 public class pruebascambiomenu : MonoBehaviour
 {
+    [SerializeField] int escena;
 
-    // Start is called before the first frame update
-    void Start()
+
+      public void Cambiodeescena()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    public void IniciarJuego()
-    {
-
+        SceneManager.LoadScene(escena);
 
     }
 
+    public void EscenaJuego()
+    {
+        SceneManager.LoadScene(1);
+    }
+
+    public void EscenaConfig()
+    {
+        SceneManager.LoadScene(2);
+
+    }
+    public void EscenaHighScores()
+    {
+        SceneManager.LoadScene(4);
+
+    }
 }

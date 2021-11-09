@@ -65,7 +65,7 @@ public class InitGame : MonoBehaviour
         Instanciadorobst instanciadorobst = GameObject.Find("Instanciador").GetComponent<Instanciadorobst>();
         instanciadorobst.SendMessage("Pararobst");
         GameObject.Find("Navegrupo").SetActive(false);
-        //SceneManager.LoadScene(2);
+        SceneManager.LoadScene(3);
     }
     public void Invencibilidad()
     {
