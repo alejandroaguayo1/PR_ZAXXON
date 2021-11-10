@@ -36,8 +36,8 @@ public class Movimiento : MonoBehaviour
     void Update()
     {
         MoverNave();
-        float rot = Input.GetAxis("Horizontal-J2");
-        transform.Rotate(Vector3.back * Time.deltaTime * rot * 100f);
+        /*float rot = Input.GetAxis("Horizontal-J2");
+        transform.Rotate(Vector3.back * Time.deltaTime * rot * 100f);*/
         /*if (Input.GetButtonDown("Fire1"))
         {
             Disparar();
@@ -95,7 +95,7 @@ public class Movimiento : MonoBehaviour
     
     private void OnTriggerEnter(Collider other)
     {
-        print("boom");
+      
         if (initGame.invencible == false)
                 if (other.gameObject.layer == 6)
         {

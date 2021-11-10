@@ -157,8 +157,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 117.24, y: 38}
-  m_SizeDelta: {x: 1685.5, y: 247.1793}
+  m_AnchoredPosition: {x: -0.01757, y: 38}
+  m_SizeDelta: {x: 1920, y: 247.1793}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &98622869
 MonoBehaviour:
@@ -183,7 +183,7 @@ MonoBehaviour:
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 162
-    m_FontStyle: 0
+    m_FontStyle: 3
     m_BestFit: 0
     m_MinSize: 10
     m_MaxSize: 162
@@ -285,8 +285,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 747952235}
-        m_TargetAssemblyTypeName: Configscript, Assembly-CSharp
+      - m_Target: {fileID: 747952236}
+        m_TargetAssemblyTypeName: HighScores, Assembly-CSharp
         m_MethodName: EscenaVolverInicio
         m_Mode: 1
         m_Arguments:
@@ -347,7 +347,6 @@ GameObject:
   - component: {fileID: 747952233}
   - component: {fileID: 747952232}
   - component: {fileID: 747952231}
-  - component: {fileID: 747952235}
   - component: {fileID: 747952236}
   m_Layer: 5
   m_Name: Canvas
@@ -432,28 +431,13 @@ RectTransform:
   - {fileID: 742465865}
   - {fileID: 98622868}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!114 &747952235
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 747952230}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6a7187c97588dc042a6cd8b1f82edc8d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  volumenSlider: {fileID: 0}
-  dificultadSlider: {fileID: 0}
-  musicaSlider: {fileID: 0}
 --- !u!114 &747952236
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -467,58 +451,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Highscore: {fileID: 98622869}
---- !u!1 &1042162628
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1042162630}
-  - component: {fileID: 1042162629}
-  m_Layer: 0
-  m_Name: Scores
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1042162629
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1042162628}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc42d7806d52ef54b9c1bded3bdaf565, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spaceshipSpeed: 0
-  score: 0
-  maxSpeed: 0
-  alive: 0
-  invencible: 0
-  cargada: 0
-  duracioninv: 2
-  scoreText: {fileID: 0}
-  speedText: {fileID: 0}
---- !u!4 &1042162630
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1042162628}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 687.4053, y: 538.2051, z: 65.70056}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1128157336
 GameObject:
   m_ObjectHideFlags: 0
@@ -673,58 +605,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1154877708}
   m_CullTransparentMesh: 1
---- !u!1 &1240902002
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1240902004}
-  - component: {fileID: 1240902003}
-  m_Layer: 0
-  m_Name: Inicio
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1240902003
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1240902002}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc42d7806d52ef54b9c1bded3bdaf565, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spaceshipSpeed: 0
-  score: 0
-  maxSpeed: 0
-  alive: 0
-  invencible: 0
-  cargada: 0
-  duracioninv: 2
-  scoreText: {fileID: 0}
-  speedText: {fileID: 0}
---- !u!4 &1240902004
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1240902002}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.22949049, y: -5.9806786, z: -0.8497642}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1376924635
 GameObject:
   m_ObjectHideFlags: 0
@@ -789,7 +669,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1860507142
 GameObject:

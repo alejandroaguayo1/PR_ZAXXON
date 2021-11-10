@@ -59,12 +59,20 @@ public class InitGame : MonoBehaviour
     }
     public void Morir()
     {
-        print("Me he muerto");
         alive = false;
         spaceshipSpeed = 0f;
         Instanciadorobst instanciadorobst = GameObject.Find("Instanciador").GetComponent<Instanciadorobst>();
         instanciadorobst.SendMessage("Pararobst");
         GameObject.Find("Navegrupo").SetActive(false);
+        Invoke("GameOver", 1f);
+        if (score > GameManager.Highscores)
+        {
+            GameManager.Highscores = score;
+        }
+    }
+
+    public void GameOver()
+    {
         SceneManager.LoadScene(3);
     }
     public void Invencibilidad()

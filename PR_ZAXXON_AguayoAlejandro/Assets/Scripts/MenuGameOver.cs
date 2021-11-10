@@ -1,17 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class HighScores : MonoBehaviour
+public class MenuGameOver : MonoBehaviour
 {
-    [SerializeField] Text Highscore;
-    // Start is called before the first frame update
-    void Start()
-    {
-        Highscore.text = "HighScore: " + (Mathf.Round(GameManager.Highscores)) + "Pts";
-    }
     public void EscenaVolverJuego()
     {
         SceneManager.LoadScene(1);
@@ -22,6 +15,4 @@ public class HighScores : MonoBehaviour
         SceneManager.LoadScene(0);
 
     }
-
-
 }
