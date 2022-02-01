@@ -96,7 +96,7 @@ public class Movimiento : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
       
-        if (initGame.invencible == false)
+        //if (initGame.invencible == false)
                 if (other.gameObject.layer == 6)
         {
             
