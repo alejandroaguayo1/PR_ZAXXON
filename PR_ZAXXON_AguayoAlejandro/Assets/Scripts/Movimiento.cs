@@ -9,7 +9,7 @@ public class Movimiento : MonoBehaviour
     
 
     [SerializeField] float desplSpeed;
-    [SerializeField] GameObject navePrefab;
+    //[SerializeField] GameObject navePrefab;
     //[SerializeField] Transform cannon;
     
     float limiteR = 10;
