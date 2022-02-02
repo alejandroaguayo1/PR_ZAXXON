@@ -35,9 +35,9 @@ public class Movimiento : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Girar();
         MoverNave();
-        /*float rot = Input.GetAxis("Horizontal-J2");
-        transform.Rotate(Vector3.back * Time.deltaTime * rot * 100f);*/
+       
         /*if (Input.GetButtonDown("Fire1"))
         {
             Disparar();
@@ -88,7 +88,13 @@ public class Movimiento : MonoBehaviour
         {
             transform.Translate(Vector3.up * Time.deltaTime * desplV * desplSpeed, Space.World);
         }
+        
+    }
 
+    void Girar()
+    {
+        float rot = Input.GetAxis("Horizontal-J2");
+        transform.Rotate(Vector3.back * Time.deltaTime * rot * 100f);
     }
     
     
