@@ -11,8 +11,8 @@ public class Instanciadorobst : MonoBehaviour
     [SerializeField] InitGame initGame;
     [SerializeField] GameObject[] Obstaculos;
     float speed;
-    float limiteL = -5f;
-    float limiteR = 5f;
+    float limiteL = -7f;
+    float limiteR = 7f;
     float limiteAb = 0f;
     float limiteAr = 8f;
     float randomY;

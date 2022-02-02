@@ -14,8 +14,8 @@ public class Movimiento : MonoBehaviour
     
     float limiteR = 10;
     float limiteL = -10;
-    float limiteU = 10;
-    float limiteS = 1;
+    float limiteU = 15;
+    float limiteS = 3f;
 
     
     bool inLimitH = true;
