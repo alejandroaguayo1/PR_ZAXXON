@@ -17,7 +17,7 @@ public class Instanciadorobst : MonoBehaviour
     float limiteAr = 8f;
     float randomY;
     float intervalo;
-    //float Highscores;
+    //float highscores;
     [SerializeField] Transform instantiatePos;
     // Start is called before the first frame update
     void Start()
@@ -26,7 +26,7 @@ public class Instanciadorobst : MonoBehaviour
         initGame = GameObject.Find("InitGame").GetComponent<InitGame>();
         //intervalo = 0.4f;
         distanciaentreobtaculos = 8f; //4
-        //Highscores = GameManager.Highscores;
+        //highscores = GameObject.Find("GameManager").GetComponent<GameManager>;
         /*if(Highscores > 300f)
         {
 
@@ -50,6 +50,7 @@ public class Instanciadorobst : MonoBehaviour
         while (true)
         {
 
+            //if(high)
             speed = initGame.spaceshipSpeed;
             intervalo = distanciaentreobtaculos / initGame.spaceshipSpeed;            
             int numAl = Random.Range(0, Obstaculos.Length);

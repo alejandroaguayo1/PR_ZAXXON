@@ -6,16 +6,20 @@ using UnityEngine.SceneManagement;
 
 public class InitGame : MonoBehaviour
 {
-    public float spaceshipSpeed = 0f;
-    // saber en qué escena estoy int y = SceneManager.GetActiveScene()BuildIndex; 
-
-   
+    public float spaceshipSpeed = 0f;         
     public float score;
     [SerializeField] float maxSpeed;
     public bool  alive;
     public bool invencible;
     public bool cargada;
     public float duracioninv = 2f;
+
+    //Vidas
+    [SerializeField] Image lives;
+    [SerializeField] Sprite[] livesArray;
+    [SerializeField] int vidas;
+    int spritesPos = 0;
+    [SerializeField] InitGame initGame;
 
     //UI
     [SerializeField] Text scoreText;
@@ -24,7 +28,8 @@ public class InitGame : MonoBehaviour
     void Start()
     {
         spaceshipSpeed = 10f;
-
+        vidas = 3;
+        lives.sprite = livesArray[spritesPos];
         //score = 0; //distancia recorrida = velocidad * tiempo (con el time)
         maxSpeed = 70;
         alive = true;
@@ -43,7 +48,7 @@ public class InitGame : MonoBehaviour
 
         }
 
-        //posible turbo spaceshipSpeed = 10f + n++ * Time.deltaTime; 
+         
 
         float tiempo = Time.timeSinceLevelLoad;
         score = Mathf.Round(tiempo) * spaceshipSpeed;
@@ -70,6 +75,19 @@ public class InitGame : MonoBehaviour
             GameManager.Highscores = score;
         }
     }
+    public void Chocar()
+    {            
+        vidas--;
+
+        if (vidas == 0)
+        {
+
+            Morir();
+
+        }
+        spritesPos++;   
+        lives.sprite = livesArray[spritesPos];
+    }
 
     public void GameOver()
     {
@@ -81,6 +99,7 @@ public class InitGame : MonoBehaviour
         Invoke("PararInv", duracioninv);
 
     }
+    
 
     public void PararInv()
     {
