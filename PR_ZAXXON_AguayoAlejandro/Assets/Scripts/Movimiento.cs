@@ -6,7 +6,7 @@ using UnityEngine;
 public class Movimiento : MonoBehaviour
 {
     InitGame initGame;
-    float n = 0;
+    //float n = 0;
 
     [SerializeField] float desplSpeed;
     //[SerializeField] GameObject navePrefab;
@@ -37,7 +37,7 @@ public class Movimiento : MonoBehaviour
     {
         Girar();
         MoverNave();
-        //Turbo();
+        Turbo();
         /*if (Input.GetButtonDown("Fire1"))
         {
             Disparar();
@@ -100,9 +100,9 @@ public class Movimiento : MonoBehaviour
 
     public void Turbo()
     {
-        if (Input.GetButtonDown("Fire1"))
+        if (initGame.spaceshipSpeed<150 && Input.GetButtonDown("Fire1"))
         {
-            initGame.spaceshipSpeed = 10f + n++ * Time.deltaTime; //posible turbo 
+            initGame.spaceshipSpeed = initGame.spaceshipSpeed * 2; //posible turbo 
         }
         
     }
