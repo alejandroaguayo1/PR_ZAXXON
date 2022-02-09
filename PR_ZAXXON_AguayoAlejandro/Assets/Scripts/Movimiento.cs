@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 
 public class Movimiento : MonoBehaviour
@@ -17,11 +18,12 @@ public class Movimiento : MonoBehaviour
     float limiteU = 15;
     float limiteS = 3f;
 
+    float limeteTurbo = 3f;
     
     bool inLimitH = true;
     bool inLimitV = true;
 
-    
+    [SerializeField] Slider turbo;
 
     // Start is called before the first frame update
     void Start()
@@ -30,6 +32,7 @@ public class Movimiento : MonoBehaviour
         transform.position = new Vector3(0f, 2.3f, 0f);
         
         desplSpeed = initGame.spaceshipSpeed;
+        turbo.value = limeteTurbo;
     }
 
     // Update is called once per frame
@@ -100,9 +103,10 @@ public class Movimiento : MonoBehaviour
 
     public void Turbo()
     {
-        if (initGame.spaceshipSpeed<150 && Input.GetButtonDown("Fire1"))
+        if (limeteTurbo > 0 && Input.GetButtonDown("Fire1"))
         {
-            initGame.spaceshipSpeed = initGame.spaceshipSpeed * 2; //posible turbo 
+            limeteTurbo--;
+            initGame.spaceshipSpeed = initGame.spaceshipSpeed + 10; //posible turbo 
         }
         
     }

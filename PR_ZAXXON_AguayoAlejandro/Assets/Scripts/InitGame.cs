@@ -24,6 +24,7 @@ public class InitGame : MonoBehaviour
     //UI
     [SerializeField] Text scoreText;
     [SerializeField] Text speedText;
+    
     // Start is called before the first frame update
     void Start()
     {
