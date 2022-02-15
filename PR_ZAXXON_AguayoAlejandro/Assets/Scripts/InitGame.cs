@@ -14,6 +14,10 @@ public class InitGame : MonoBehaviour
     public bool cargada;
     public float duracioninv = 2f;
 
+    //Audio
+    AudioSource audioSource;
+    [SerializeField] AudioClip explosion;
+    
     //Vidas
     [SerializeField] Image lives;
     [SerializeField] Sprite[] livesArray;
@@ -34,6 +38,7 @@ public class InitGame : MonoBehaviour
         //score = 0; //distancia recorrida = velocidad * tiempo (con el time)
         maxSpeed = 70;
         alive = true;
+        audioSource = GetComponent<AudioSource>();
         
         scoreText.text = (Mathf.Round(score)) + "mts";
 
@@ -70,6 +75,7 @@ public class InitGame : MonoBehaviour
         Instanciadorobst instanciadorobst = GameObject.Find("Instanciador").GetComponent<Instanciadorobst>();
         instanciadorobst.SendMessage("Pararobst");
         GameObject.Find("Navegrupo").SetActive(false);
+
         Invoke("GameOver", 1f);
         if (score > GameManager.Highscores)
         {
@@ -84,7 +90,7 @@ public class InitGame : MonoBehaviour
         {
 
             Morir();
-
+            audioSource.PlayOneShot(explosion,0.3f);
         }
         spritesPos++;   
         lives.sprite = livesArray[spritesPos];

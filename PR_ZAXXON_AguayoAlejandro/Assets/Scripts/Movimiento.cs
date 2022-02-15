@@ -24,6 +24,10 @@ public class Movimiento : MonoBehaviour
     bool inLimitV = true;
 
     [SerializeField] Slider turbo;
+    //Audio
+
+    AudioSource audioSource;
+    [SerializeField] AudioClip turbonave;
 
     // Start is called before the first frame update
     void Start()
@@ -106,7 +110,10 @@ public class Movimiento : MonoBehaviour
         if (limeteTurbo > 0 && Input.GetButtonDown("Fire1"))
         {
             limeteTurbo--;
-            initGame.spaceshipSpeed = initGame.spaceshipSpeed + 10; //posible turbo 
+            
+            initGame.spaceshipSpeed = initGame.spaceshipSpeed + 10;
+            audioSource.PlayOneShot(turbonave, 0.2f);
+            print("sonido");
         }
         
     }
