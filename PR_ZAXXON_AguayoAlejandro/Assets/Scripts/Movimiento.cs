@@ -24,17 +24,22 @@ public class Movimiento : MonoBehaviour
     bool inLimitV = true;
 
     [SerializeField] Slider turbo;
+
     //Audio
 
     AudioSource audioSource;
     [SerializeField] AudioClip turbonave;
-    
+
+    //Particulas
+
+    [SerializeField] GameObject Turbooo;
+
     // Start is called before the first frame update
     void Start()
     {
         initGame = GameObject.Find("InitGame").GetComponent<InitGame>();
         transform.position = new Vector3(0f, 2.3f, 0f);
-        
+        Turbooo.SetActive(false);
         desplSpeed = initGame.spaceshipSpeed;
     }
 
@@ -109,13 +114,18 @@ public class Movimiento : MonoBehaviour
         if (limeteTurbo > 0 && Input.GetButtonDown("Fire1"))
         {
             limeteTurbo--;
-            turbo.value = limeteTurbo;
-
+            Turbooo.SetActive(true);
+            Invoke("TurboOut", 0.3f);
+            turbo.value = limeteTurbo;            
             initGame.spaceshipSpeed = initGame.spaceshipSpeed + 10;
             //audioSource.PlayOneShot(turbonave, 0.2f);
             //print("sonido");
         }
         
+    }
+    public void TurboOut()
+    {
+        Turbooo.SetActive(false);
     }
 
     private void OnTriggerEnter(Collider other)
