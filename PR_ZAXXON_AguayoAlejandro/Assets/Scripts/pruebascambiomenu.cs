@@ -29,4 +29,9 @@ public class pruebascambiomenu : MonoBehaviour
         SceneManager.LoadScene(4);
 
     }
+
+    public void Exit()
+    {
+        Application.Quit();
+    }
 }

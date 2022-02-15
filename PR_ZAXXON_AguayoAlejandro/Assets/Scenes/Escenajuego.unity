@@ -711,6 +711,57 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 157.77, y: -30, z: 0}
+--- !u!1 &716475646
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 716475648}
+  - component: {fileID: 716475647}
+  m_Layer: 0
+  m_Name: InstaNaves
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &716475647
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 716475646}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 127233a91f94d064d975f5652ff24d29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 0}
+  prefab2: {fileID: 0}
+  distanciaentreobtaculos: 0
+  initGame: {fileID: 0}
+  Obstaculos:
+  - {fileID: 100125839793906386, guid: ec344e4197486c243bf1493f530e7611, type: 3}
+  - {fileID: 5164155280778619515, guid: d508819cad18ba441866fda202aa6932, type: 3}
+  instantiatePos: {fileID: 716475648}
+--- !u!4 &716475648
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 716475646}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 14.291622, y: 7.4462433, z: 86.42827}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &940466352
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1590,11 +1641,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   desplSpeed: 0
-  Turbooo: {fileID: 1198854703}
   turbo: {fileID: 1740728121}
   turbonave: {fileID: 8300000, guid: 3f493c2bbb2c07e4385a5fd2973ad9a0, type: 3}
-  LucesTurbo: {fileID: 0}
-  PosiTurbo: {fileID: 0}
+  Turbooo: {fileID: 1198854703}
 --- !u!64 &2000447966
 MeshCollider:
   m_ObjectHideFlags: 0

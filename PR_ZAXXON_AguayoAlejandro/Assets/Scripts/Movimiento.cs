@@ -32,7 +32,7 @@ public class Movimiento : MonoBehaviour
 
     //Particulas
 
-    [SerializeField] GameObject Turbooo;
+    [SerializeField] GameObject Turbooo;    
 
     // Start is called before the first frame update
     void Start()

@@ -1,5 +1,17 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-718201830359281042
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5164155280778619515}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f0f22b5d8486dc41996d63be94579bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &5164155280778718425
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7,9 +19,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 100000, guid: b966a51581ce9c84380a9fa6c3b7ca56, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: b966a51581ce9c84380a9fa6c3b7ca56, type: 3}
       propertyPath: m_Name
-      value: Ship_2
+      value: Ship_2 Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: b966a51581ce9c84380a9fa6c3b7ca56, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: b966a51581ce9c84380a9fa6c3b7ca56, type: 3}
       propertyPath: m_RootOrder
@@ -73,3 +93,8 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 8af8de4c1fc36994a835b6d52e42565e, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b966a51581ce9c84380a9fa6c3b7ca56, type: 3}
+--- !u!1 &5164155280778619515 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100002, guid: b966a51581ce9c84380a9fa6c3b7ca56, type: 3}
+  m_PrefabInstance: {fileID: 5164155280778718425}
+  m_PrefabAsset: {fileID: 0}
