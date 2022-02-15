@@ -740,13 +740,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 127233a91f94d064d975f5652ff24d29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefab: {fileID: 0}
-  prefab2: {fileID: 0}
   distanciaentreobtaculos: 0
   initGame: {fileID: 0}
   Obstaculos:
   - {fileID: 100125839793906386, guid: ec344e4197486c243bf1493f530e7611, type: 3}
   - {fileID: 5164155280778619515, guid: d508819cad18ba441866fda202aa6932, type: 3}
+  - {fileID: 5164155280778619515, guid: 4663b383b1fe94945b80207e4b80f3a7, type: 3}
+  - {fileID: 100125839793906386, guid: 191a51f541e9bf744a869c4e32dbf3a5, type: 3}
   instantiatePos: {fileID: 716475648}
 --- !u!4 &716475648
 Transform:
@@ -761,6 +761,65 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &781980365
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 781980367}
+  - component: {fileID: 781980366}
+  m_Layer: 0
+  m_Name: Rocas
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &781980366
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 781980365}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 394b48208e44ab145a8265666564f755, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  distanciaentreobtaculos: 0
+  initGame: {fileID: 0}
+  Obstaculos:
+  - {fileID: 135572, guid: 4f9eb78926c668f4cb77ae240ebc4e7b, type: 3}
+  - {fileID: 100138, guid: 9a26fda765c5ec84cb8f61c1fd583113, type: 3}
+  - {fileID: 150586, guid: 3f78c2fb6bcbd9a4181e8bf0f559176c, type: 3}
+  - {fileID: 152702, guid: 867378ef976c9c546b471bb2987b7c37, type: 3}
+  - {fileID: 109854, guid: 1ff824149eae4314da4f1eef270bb660, type: 3}
+  - {fileID: 153058, guid: 0f5a1a462eaffb249a819206c43e7827, type: 3}
+  - {fileID: 169128, guid: a71826ab0be7d274e8a701fc1fae2cde, type: 3}
+  - {fileID: 104182, guid: e332ab09906f0274a89a35ab12ba3b1a, type: 3}
+  - {fileID: 172060, guid: 5bdf56d7f1d650446a4e3db0ff35e203, type: 3}
+  - {fileID: 111800, guid: 38c5866056ba81a4dab05ad3ee9b7bd1, type: 3}
+  - {fileID: 177906, guid: 16bbcd0ddb74fd24eb3187d81ecb0108, type: 3}
+  - {fileID: 185610, guid: df547bf229800194aa6279cf8a2430f6, type: 3}
+  instantiatePos: {fileID: 781980367}
+--- !u!4 &781980367
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 781980365}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -23.45, y: 2.1098032, z: 180}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &940466352
 PrefabInstance:
@@ -876,7 +935,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 55e7fefcb1252564e83b96186b0c9fdb, type: 3}
+  m_Sprite: {fileID: 21300064, guid: 56d84991286850f428b4e7df0cca7380, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1361,6 +1420,65 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1388596012}
   m_CullTransparentMesh: 1
+--- !u!1 &1701317341
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1701317343}
+  - component: {fileID: 1701317342}
+  m_Layer: 0
+  m_Name: Rocas (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1701317342
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1701317341}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8a1af743ac84a042a763feb69b89914, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  distanciaentreobtaculos: 0
+  initGame: {fileID: 0}
+  Obstaculos:
+  - {fileID: 135572, guid: 4f9eb78926c668f4cb77ae240ebc4e7b, type: 3}
+  - {fileID: 100138, guid: 9a26fda765c5ec84cb8f61c1fd583113, type: 3}
+  - {fileID: 150586, guid: 3f78c2fb6bcbd9a4181e8bf0f559176c, type: 3}
+  - {fileID: 152702, guid: 867378ef976c9c546b471bb2987b7c37, type: 3}
+  - {fileID: 109854, guid: 1ff824149eae4314da4f1eef270bb660, type: 3}
+  - {fileID: 169128, guid: a71826ab0be7d274e8a701fc1fae2cde, type: 3}
+  - {fileID: 153058, guid: 0f5a1a462eaffb249a819206c43e7827, type: 3}
+  - {fileID: 104182, guid: e332ab09906f0274a89a35ab12ba3b1a, type: 3}
+  - {fileID: 177906, guid: 16bbcd0ddb74fd24eb3187d81ecb0108, type: 3}
+  - {fileID: 111800, guid: 38c5866056ba81a4dab05ad3ee9b7bd1, type: 3}
+  - {fileID: 185610, guid: df547bf229800194aa6279cf8a2430f6, type: 3}
+  - {fileID: 172060, guid: 5bdf56d7f1d650446a4e3db0ff35e203, type: 3}
+  instantiatePos: {fileID: 1701317343}
+--- !u!4 &1701317343
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1701317341}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 14.68, y: 2.1098032, z: 180}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 14
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1740728119
 GameObject:
   m_ObjectHideFlags: 0
@@ -1387,7 +1505,7 @@ RectTransform:
   m_GameObject: {fileID: 1740728119}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.3497, y: 1.3497, z: 1.3497}
   m_Children:
   - {fileID: 944670663}
   - {fileID: 1776758997}
@@ -1550,8 +1668,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 20, y: 0}
+  m_AnchoredPosition: {x: 0, y: -0.79999924}
+  m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1857120008
 MonoBehaviour:
@@ -1573,7 +1691,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: a353e74bbf461964eb5bcb8553404fdb, type: 3}
+  m_Sprite: {fileID: 21300060, guid: 56d84991286850f428b4e7df0cca7380, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

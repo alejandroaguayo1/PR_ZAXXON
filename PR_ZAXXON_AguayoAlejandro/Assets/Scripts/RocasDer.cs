@@ -2,16 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class InstanNaves : MonoBehaviour
-{    
+public class RocasDer : MonoBehaviour
+{
     [SerializeField] float distanciaentreobtaculos;
     [SerializeField] InitGame initGame;
     [SerializeField] GameObject[] Obstaculos;
     float speed;
-    float limiteL = -20f;
-    float limiteR = 20f;
-    float limiteAb = 26f;
-    float limiteAr = 30f;
+    float limiteL = +30f;
+    float limiteR = +20f;
+    float limiteAb = 5f;
+    float limiteAr = 10f;
     float randomY;
     float intervalo;
     //float Highscores;
@@ -22,7 +22,7 @@ public class InstanNaves : MonoBehaviour
 
         initGame = GameObject.Find("InitGame").GetComponent<InitGame>();
 
-        distanciaentreobtaculos = 10f;
+        distanciaentreobtaculos = 18f;
 
 
 
@@ -44,7 +44,7 @@ public class InstanNaves : MonoBehaviour
             int numAl = Random.Range(0, Obstaculos.Length);
 
             float randomX;
-            if (Obstaculos[numAl].tag != "Naves")
+            if (Obstaculos[numAl].tag != "Rocas")
             {
                 randomX = Random.Range(limiteL, limiteR);
                 randomY = Random.Range(limiteAr, limiteAb);
