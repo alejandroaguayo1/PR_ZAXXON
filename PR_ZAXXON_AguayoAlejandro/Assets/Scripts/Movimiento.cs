@@ -28,7 +28,7 @@ public class Movimiento : MonoBehaviour
 
     AudioSource audioSource;
     [SerializeField] AudioClip turbonave;
-
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -36,7 +36,6 @@ public class Movimiento : MonoBehaviour
         transform.position = new Vector3(0f, 2.3f, 0f);
         
         desplSpeed = initGame.spaceshipSpeed;
-        turbo.value = limeteTurbo;
     }
 
     // Update is called once per frame
@@ -110,10 +109,11 @@ public class Movimiento : MonoBehaviour
         if (limeteTurbo > 0 && Input.GetButtonDown("Fire1"))
         {
             limeteTurbo--;
-            
+            turbo.value = limeteTurbo;
+
             initGame.spaceshipSpeed = initGame.spaceshipSpeed + 10;
-            audioSource.PlayOneShot(turbonave, 0.2f);
-            print("sonido");
+            //audioSource.PlayOneShot(turbonave, 0.2f);
+            //print("sonido");
         }
         
     }

@@ -405,8 +405,9 @@ MonoBehaviour:
   invencible: 0
   cargada: 0
   duracioninv: 2
+  Explosion: {fileID: 100006, guid: e076683e0305e35498b8e8834978c0fa, type: 3}
+  PosiNave: {fileID: 2000447964}
   explosion: {fileID: 8300000, guid: ea76260946f716046b1ba34c80ed5399, type: 3}
-  turbonave: {fileID: 8300000, guid: 3f493c2bbb2c07e4385a5fd2973ad9a0, type: 3}
   lives: {fileID: 1388596014}
   livesArray:
   - {fileID: 9200775849295203296, guid: 6bf1a7a5e5e841a40a41d0a4a1b37bba, type: 3}
@@ -1425,6 +1426,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   desplSpeed: 0
   turbo: {fileID: 1740728121}
+  turbonave: {fileID: 8300000, guid: 3f493c2bbb2c07e4385a5fd2973ad9a0, type: 3}
 --- !u!64 &2000447966
 MeshCollider:
   m_ObjectHideFlags: 0

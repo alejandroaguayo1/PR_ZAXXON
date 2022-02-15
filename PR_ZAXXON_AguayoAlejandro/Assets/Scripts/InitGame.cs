@@ -14,6 +14,10 @@ public class InitGame : MonoBehaviour
     public bool cargada;
     public float duracioninv = 2f;
 
+    //Particulas
+    [SerializeField] GameObject Explosion;
+    [SerializeField] Transform PosiNave;
+
     //Audio
     AudioSource audioSource;
     [SerializeField] AudioClip explosion;
@@ -41,6 +45,7 @@ public class InitGame : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
         
         scoreText.text = (Mathf.Round(score)) + "mts";
+        
 
     }
 
@@ -75,8 +80,10 @@ public class InitGame : MonoBehaviour
         Instanciadorobst instanciadorobst = GameObject.Find("Instanciador").GetComponent<Instanciadorobst>();
         instanciadorobst.SendMessage("Pararobst");
         GameObject.Find("Navegrupo").SetActive(false);
-
-        Invoke("GameOver", 1f);
+        Vector3 posNave = new Vector3(PosiNave.position.x, PosiNave.position.y, PosiNave.position.z);
+        GameObject ExplosionClone = Instantiate(Explosion, posNave, Quaternion.identity) as GameObject;
+        Destroy(ExplosionClone, 1f);
+        Invoke("GameOver", 2f);
         if (score > GameManager.Highscores)
         {
             GameManager.Highscores = score;
@@ -90,7 +97,7 @@ public class InitGame : MonoBehaviour
         {
 
             Morir();
-            audioSource.PlayOneShot(explosion,0.3f);
+            //audioSource.PlayOneShot(explosion,0.3f);
         }
         spritesPos++;   
         lives.sprite = livesArray[spritesPos];
