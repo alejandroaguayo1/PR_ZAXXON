@@ -1342,7 +1342,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Dificultad
+  m_Text: 'Efectos '
 --- !u!222 &1570368828
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1882,7 +1882,7 @@ GameObject:
   - component: {fileID: 2010756080}
   - component: {fileID: 2010756081}
   m_Layer: 5
-  m_Name: Slider Dificultad
+  m_Name: Slider Efectos
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1953,8 +1953,8 @@ MonoBehaviour:
   m_FillRect: {fileID: 0}
   m_HandleRect: {fileID: 1206497883}
   m_Direction: 0
-  m_MinValue: 1
-  m_MaxValue: 3
+  m_MinValue: 0
+  m_MaxValue: 1
   m_WholeNumbers: 1
   m_Value: 1
   m_OnValueChanged:
