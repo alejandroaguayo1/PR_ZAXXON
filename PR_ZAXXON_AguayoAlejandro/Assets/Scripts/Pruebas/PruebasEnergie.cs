@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class Energie : MonoBehaviour
 {
-    [SerializeField] Slider Energía;
+    /*[SerializeField] Slider Energía;
     InitGame initGame;
     int n;
     
@@ -51,5 +51,5 @@ public class Energie : MonoBehaviour
             initGame.alive = true;
             
         }
-    }
+    }*/
 }

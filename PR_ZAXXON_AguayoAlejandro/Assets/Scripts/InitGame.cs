@@ -9,8 +9,7 @@ public class InitGame : MonoBehaviour
     public float spaceshipSpeed = 0f;         
     public float score;
     [SerializeField] float maxSpeed;
-    public bool  alive;
-    public bool invencible;
+    public bool  alive;    
     public bool cargada;
     public float duracioninv = 2f;
 
@@ -39,7 +38,7 @@ public class InitGame : MonoBehaviour
         spaceshipSpeed = 10f;
         vidas = 3;
         lives.sprite = livesArray[spritesPos];
-        //score = 0; //distancia recorrida = velocidad * tiempo (con el time)
+       
         maxSpeed = 70;
         alive = true;
         audioSource = GetComponent<AudioSource>();
@@ -83,7 +82,7 @@ public class InitGame : MonoBehaviour
         Vector3 posNave = new Vector3(PosiNave.position.x, PosiNave.position.y, PosiNave.position.z);
         GameObject ExplosionClone = Instantiate(Explosion, posNave, Quaternion.identity) as GameObject;
         Destroy(ExplosionClone, 1f);
-        Invoke("GameOver", 2f);
+        Invoke("GameOver", 1.2f);
         if (score > GameManager.Highscores)
         {
             GameManager.Highscores = score;
@@ -107,18 +106,7 @@ public class InitGame : MonoBehaviour
     {
         SceneManager.LoadScene(3);
     }
-    public void Invencibilidad()
-    {
-        alive = true;
-        Invoke("PararInv", duracioninv);
-
-    }
-    
-
-    public void PararInv()
-    {
-
-    }
+   
 
 
 

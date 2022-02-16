@@ -50,7 +50,7 @@ public class Instanciadorobst : MonoBehaviour
         while (true)
         {
 
-            //if(high)
+            
             speed = initGame.spaceshipSpeed;
             intervalo = distanciaentreobtaculos / initGame.spaceshipSpeed;            
             int numAl = Random.Range(0, Obstaculos.Length);
