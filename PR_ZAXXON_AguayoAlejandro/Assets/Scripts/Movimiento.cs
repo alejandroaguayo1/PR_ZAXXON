@@ -118,7 +118,7 @@ public class Movimiento : MonoBehaviour
             Invoke("TurboOut", 0.3f);
             turbo.value = limeteTurbo;            
             initGame.spaceshipSpeed = initGame.spaceshipSpeed + 10;
-            //audioSource.PlayOneShot(turbonave, 0.2f);
+            audioSource.PlayOneShot(turbonave, 0.2f);
             //print("sonido");
         }
         

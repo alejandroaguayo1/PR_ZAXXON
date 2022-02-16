@@ -39,7 +39,7 @@ public class InstanNaves : MonoBehaviour
         while (true)
         {
 
-            speed = initGame.spaceshipSpeed;
+            speed = initGame.spaceshipSpeed * 20;
             intervalo = distanciaentreobtaculos / initGame.spaceshipSpeed;
             int numAl = Random.Range(0, Obstaculos.Length);
 

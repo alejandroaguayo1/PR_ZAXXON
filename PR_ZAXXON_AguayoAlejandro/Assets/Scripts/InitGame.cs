@@ -97,7 +97,7 @@ public class InitGame : MonoBehaviour
         {
 
             Morir();
-            //audioSource.PlayOneShot(explosion,0.3f);
+            audioSource.PlayOneShot(explosion,0.3f);
         }
         spritesPos++;   
         lives.sprite = livesArray[spritesPos];
