@@ -1322,7 +1322,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 1, b: 0.8741138, a: 1}
+  m_Color: {r: 0.0047169924, g: 1, b: 0.87510175, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1793,7 +1793,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   volumenSlider: {fileID: 376190120}
-  dificultadSlider: {fileID: 2010756080}
+  efectosSlider: {fileID: 2010756080}
   musicaSlider: {fileID: 60071849}
 --- !u!1 &1990238317
 GameObject:

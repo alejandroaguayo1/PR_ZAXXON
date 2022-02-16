@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class Configscript : MonoBehaviour
 {
     [SerializeField] Slider volumenSlider;
-    [SerializeField] Slider dificultadSlider;
+    [SerializeField] Slider efectosSlider;
     [SerializeField] Slider musicaSlider;
 
 
@@ -15,7 +15,7 @@ public class Configscript : MonoBehaviour
     void Start()
     {
         volumenSlider.value = GameManager.volumeMusic;
-        dificultadSlider.value = GameManager.dificultad;
+        efectosSlider.value = GameManager.efectos;
         musicaSlider.value = GameManager.música;
 
 
@@ -29,7 +29,7 @@ public class Configscript : MonoBehaviour
     public void Cambiarvolumenmusica()
     {
         GameManager.volumeMusic = volumenSlider.value;
-        GameManager.dificultad = dificultadSlider.value;
+        GameManager.efectos = efectosSlider.value;
         GameManager.música = musicaSlider.value;
 
 
