@@ -1922,6 +1922,7 @@ MonoBehaviour:
   volumenSlider: {fileID: 376190120}
   efectosSlider: {fileID: 2010756080}
   musicaSlider: {fileID: 60071849}
+  audioMixer: {fileID: 24100000, guid: 1e30fdce21f8e8a418c61512f93662b4, type: 2}
 --- !u!1 &1990238317
 GameObject:
   m_ObjectHideFlags: 0

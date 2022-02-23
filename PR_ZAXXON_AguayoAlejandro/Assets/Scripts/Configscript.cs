@@ -3,12 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEngine.Audio;
 
 public class Configscript : MonoBehaviour
 {
     [SerializeField] Slider volumenSlider;
     [SerializeField] Slider efectosSlider;
     [SerializeField] Slider musicaSlider;
+    [SerializeField] AudioMixer audioMixer;
 
 
     // Start is called before the first frame update
@@ -24,7 +26,8 @@ public class Configscript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        Cambiarvolumenmusica();
+        volumenSlider.onValueChanged.AddListener(delegate { SetSound("Master", volumenSlider.value); });
     }
     public void Cambiarvolumenmusica()
     {
@@ -33,6 +36,10 @@ public class Configscript : MonoBehaviour
         GameManager.música = musicaSlider.value;
 
 
+    }
+    public void SetSound(string tipoVolumen, float nivelVol)
+    {
+        audioMixer.SetFloat(tipoVolumen, nivelVol);
     }
     public void EscenaVolverInicio()
     {
