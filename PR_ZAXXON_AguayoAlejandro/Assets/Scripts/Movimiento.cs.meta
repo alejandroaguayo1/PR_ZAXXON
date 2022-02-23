@@ -3,7 +3,10 @@ guid: eec795d4830b5e444b0f403afd10b70d
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - turbo: {instanceID: 0}
+  - turbonave: {fileID: 8300000, guid: 3f493c2bbb2c07e4385a5fd2973ad9a0, type: 3}
+  - Turbooo: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

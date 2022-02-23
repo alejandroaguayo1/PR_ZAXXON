@@ -38,6 +38,7 @@ public class Movimiento : MonoBehaviour
     void Start()
     {
         initGame = GameObject.Find("InitGame").GetComponent<InitGame>();
+        audioSource = GetComponent<AudioSource>();
         transform.position = new Vector3(0f, 2.3f, 0f);
         Turbooo.SetActive(false);
         desplSpeed = initGame.spaceshipSpeed;
@@ -118,7 +119,7 @@ public class Movimiento : MonoBehaviour
             Invoke("TurboOut", 0.3f);
             turbo.value = limeteTurbo;            
             initGame.spaceshipSpeed = initGame.spaceshipSpeed + 10;
-            audioSource.PlayOneShot(turbonave, 0.2f);
+            audioSource.PlayOneShot(turbonave, 1f);
             //print("sonido");
         }
         

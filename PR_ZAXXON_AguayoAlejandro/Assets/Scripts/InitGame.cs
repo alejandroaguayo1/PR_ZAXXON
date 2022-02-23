@@ -81,6 +81,7 @@ public class InitGame : MonoBehaviour
         GameObject.Find("Navegrupo").SetActive(false);
         Vector3 posNave = new Vector3(PosiNave.position.x, PosiNave.position.y, PosiNave.position.z);
         GameObject ExplosionClone = Instantiate(Explosion, posNave, Quaternion.identity) as GameObject;
+        //audioSource.PlayOneShot(explosion, 0.2f);
         Destroy(ExplosionClone, 1f);
         Invoke("GameOver", 1.2f);
         if (score > GameManager.Highscores)
